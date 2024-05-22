@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.imperiumgym.ui.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.imperiumgym.ui.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_questionFragment"
+            app:destination="@id/registerNameFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.imperiumgym.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailEventFragment"
+            app:destination="@id/detailEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerNameFragment"
+        android:name="com.example.imperiumgym.ui.RegisterNameFragment"
+        android:label="fragment_register_name"
+        tools:layout="@layout/fragment_register_name" >
+        <action
+            android:id="@+id/action_registerNameFragment_to_registerAdressFragment"
+            app:destination="@id/registerAdressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerAdressFragment"
+        android:name="com.example.imperiumgym.ui.RegisterAdressFragment"
+        android:label="fragment_register_adress"
+        tools:layout="@layout/fragment_register_adress" >
+        <action
+            android:id="@+id/action_registerAdressFragment_to_registerEmailFragment2"
+            app:destination="@id/registerEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPasswordFragment"
+        android:name="com.example.imperiumgym.ui.RegisterPasswordFragment"
+        android:label="fragment_register_password"
+        tools:layout="@layout/fragment_register_password" >
+        <action
+            android:id="@+id/action_registerPasswordFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerEmailFragment"
+        android:name="com.example.imperiumgym.ui.RegisterEmailFragment"
+        android:label="fragment_register_email"
+        tools:layout="@layout/fragment_register_email" >
+        <action
+            android:id="@+id/action_registerEmailFragment2_to_registerPasswordFragment"
+            app:destination="@id/registerPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.imperiumgym.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailEventFragment"
+        android:name="com.example.imperiumgym.ui.DetailEventFragment"
+        android:label="fragment_detail_event"
+        tools:layout="@layout/fragment_detail_event" >
+        <action
+            android:id="@+id/action_detailEventFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

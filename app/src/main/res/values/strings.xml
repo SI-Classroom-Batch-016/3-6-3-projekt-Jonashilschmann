@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">ImperiumGym</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="eventTitle1">Meditation &amp; moderner Buddhismus</string>
+    <string name="eventTitle2">Morning Flow</string>
+    <string name="eventTitle3">Feel Good Yoga</string>
+    <string name="eventTitle4">Zumba</string>
+    <string name="eventTitle5">Vin &amp; Yin</string>
+    <string name="eventTitle6">Pump it up 45 min</string>
+    <string name="eventTitle7">Meditieren lernen</string>
+    <string name="eventTitle8">Slow Vinyasa</string>
+    <string name="eventTitle9">Wake up Yoga</string>
+    <string name="eventTitle10">Marathon</string>
+    <string name="eventTitle11">Halbmarathon</string>
+    <string name="eventTitle12">Triathlon</string>
+    <string name="eventTitle13">Fitness-Challenge</string>
+    <string name="eventTitle14">Spartan Race</string>
+    <string name="eventTitle15">CrossFit-Wettkampf</string>
+    <string name="eventTitle16">Schwimmwettkampf</string>
+    <string name="eventTitle17">Fahrradtour</string>
+    <string name="eventTitle18">Tennis-Turnier</string>
+
+
+    <string name="eventTime1">19:45 – 21:00</string>
+    <string name="eventTime2">20:00 - 21:15</string>
+    <string name="eventTime3">7:15 - 08:30</string>
+    <string name="eventTime4">03:17 – 19:30</string>
+    <string name="eventTime5">15:45 – 11:50</string>
+    <string name="eventTime6">16:45 – 21:05</string>
+    <string name="eventTime7">19:45 – 21:00</string>
+    <string name="eventTime8">17:45 – 16:00</string>
+    <string name="eventTime9">12:45 – 21:00</string>
+    <string name="eventTime10">14:45 – 23:00</string>
+    <string name="eventTime11">13:45 – 21:00</string>
+    <string name="eventTime12">19:45 – 19:00</string>
+    <string name="eventTime13">06:45 – 21:50</string>
+    <string name="eventTime14">11:45 – 25:00</string>
+    <string name="eventTime15">09:45 – 11:00</string>
+    <string name="eventTime16">17:45 – 21:00</string>
+    <string name="eventTime17">14:45 – 21:00</string>
+    <string name="eventTime18">20:45 – 21:00</string>
+
+
+    <string name="go">Go</string>
+    <string name="imperium_gym">Imperium Gym</string>
+    <string name="registrieren">Registrieren</string>
+    <string name="einloggen">Einloggen</string>
+    <string name="willkommen_spartaner">Willkommen, Spartaner</string>
+    <string name="zur_ck">zurück</string>
+    <string name="weiter">weiter</string>
+    <string name="frage">Frage</string>
+    <string name="name">Name</string>
+    <string name="bitte_gebe_deine_adresse_ein_spartaner">Bitte gebe deine Adresse ein Spartaner</string>
+    <string name="ort">Ort</string>
+    <string name="postleitzahl">Postleitzahl</string>
+    <string name="stra_e_amp_hausnummer"><![CDATA[Straße & Hausnummer]]></string>
+    <string name="bitte_gebe_deinen_namen_ein_spartaner">Bitte gebe deinen Namen ein, Spartaner</string>
+    <string name="bitte_gebe_deine_email_ein_spartaner">Bitte gebe deine Email ein, Spartaner</string>
+    <string name="email">Email</string>
+    <string name="bitte_gebe_dein_passwort_ein_spartaner">Bitte gebe dein Passwort ein, Spartaner</string>
+    <string name="passwort">Passwort</string>
+    <string name="passwort_wiederholen">Passwort wiederholen</string>
+    <string name="willkommen_spartaner_logg_dich_ein">Willkommen, Spartaner. Logg dich ein</string>
+    <string name="login">Login</string>
+    <string name="anzeige">Anzeige</string>
+</resources>
