@@ -12,7 +12,7 @@ import com.example.imperiumgym.databinding.FragmentRegisterPasswordBinding
 
 class RegisterPasswordFragment : Fragment() {
 
-    private val args: RegisterPasswordFragmentArgs by navArgs()
+
     private lateinit var binding: FragmentRegisterPasswordBinding
 
     override fun onCreateView(
@@ -32,8 +32,8 @@ class RegisterPasswordFragment : Fragment() {
             val passwort2 = binding.passwortWiET.text.toString()
 
             if (passwort1 == passwort2) {
-                val email = args.email
-                findNavController().navigate(RegisterPasswordFragmentDirections.actionRegisterPasswordFragmentToHomeFragment(email.toString())
+
+                findNavController().navigate(RegisterPasswordFragmentDirections.actionRegisterPasswordFragmentToHomeFragment()
                 )
             }
         }

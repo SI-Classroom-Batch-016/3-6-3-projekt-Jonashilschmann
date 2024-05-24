@@ -4,5 +4,6 @@ class Event (
     val name: String,
     val uhrzeit: String,
     val imageResource: Int,
-    val detailListe: List <Detail>
+    val detailListe: List <Detail>,
+    var favourite: Boolean
 )

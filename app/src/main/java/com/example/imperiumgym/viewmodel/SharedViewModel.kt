@@ -18,12 +18,16 @@ class SharedViewModel : ViewModel() {
 
 
 
-
-
     private var _filteredEvents: MutableLiveData<List<Event>> = MutableLiveData(allEvents)
 
     val filteredEvents: LiveData<List<Event>>
         get() = _filteredEvents
+
+
+    private var _bottomnavVisability: MutableLiveData<Boolean> = MutableLiveData(false)
+
+    val bottomnavVisability: LiveData<Boolean>
+        get() = _bottomnavVisability
 
 
     fun setDetails(details: Event) {
@@ -38,5 +42,24 @@ class SharedViewModel : ViewModel() {
 
         _filteredEvents.value = newFilteredEvents
         Log.d("test2","$_filteredEvents")
+    }
+
+    fun filterbyEventNameundFavorite (searchTerm: String) {
+
+        val newFilteredEvents = allEvents.filter {
+            it.name.lowercase().contains(searchTerm) && it.favourite
+        }
+
+        _filteredEvents.value = newFilteredEvents
+        Log.d("test2","$_filteredEvents")
+    }
+
+    fun setfavourite(favourite: Boolean) {
+        _selectedDetail.value!!.favourite = favourite
+    }
+
+    fun setbottomnavVisability(visible: Boolean) {
+
+        _bottomnavVisability.value = visible
     }
 }

@@ -31,9 +31,6 @@
         android:name="com.example.imperiumgym.ui.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
-        <argument
-            android:name="email"
-            app:argType="string" />
         <action
             android:id="@+id/action_homeFragment_to_detailEventFragment"
             app:destination="@id/detailEventFragment" />
@@ -64,9 +61,6 @@
         <action
             android:id="@+id/action_registerPasswordFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
-        <argument
-            android:name="email"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/registerEmailFragment"
@@ -94,5 +88,14 @@
         <action
             android:id="@+id/action_detailEventFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritenFragment"
+        android:name="com.example.imperiumgym.ui.FavoritenFragment"
+        android:label="fragment_favoriten"
+        tools:layout="@layout/fragment_favoriten" >
+        <action
+            android:id="@+id/action_favoritenFragment_to_detailEventFragment"
+            app:destination="@id/detailEventFragment" />
     </fragment>
 </navigation>

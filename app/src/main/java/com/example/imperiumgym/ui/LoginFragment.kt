@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
             if (email2 != null && passwort2 != null) {
                 if (email2.isNotBlank() && passwort2.isNotBlank()) {
                     findNavController().navigate(
-                        LoginFragmentDirections.actionLoginFragmentToHomeFragment(email2.toString())
+                        LoginFragmentDirections.actionLoginFragmentToHomeFragment()
                     )
                 }
             }

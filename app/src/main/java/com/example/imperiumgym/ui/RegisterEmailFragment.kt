@@ -30,7 +30,7 @@ class RegisterEmailFragment : Fragment() {
 
            if (email!!.isNotBlank()) {
                findNavController().navigate(
-                   RegisterEmailFragmentDirections.actionRegisterEmailFragment2ToRegisterPasswordFragment(email.toString())
+                   RegisterEmailFragmentDirections.actionRegisterEmailFragment2ToRegisterPasswordFragment()
                )
             }
         }

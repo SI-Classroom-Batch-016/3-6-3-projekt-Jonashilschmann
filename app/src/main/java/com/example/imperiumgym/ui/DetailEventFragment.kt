@@ -33,6 +33,10 @@ class DetailEventFragment : Fragment() {
             findNavController().navigateUp()
         }
 
+        binding.addBTN.setOnClickListener {
+            viewModel.setfavourite(true)
+        }
+
         viewModel.selectedDetail.observe(viewLifecycleOwner) { it ->
             binding.text1TV.text = it.detailListe[0].standort
             binding.text2TV.text = it.detailListe[0].produktbeschreibung

@@ -17,21 +17,22 @@ import com.example.imperiumgym.R
 import com.example.imperiumgym.adapter.EventAdapter
 import com.example.imperiumgym.data.model.Datasource
 import com.example.imperiumgym.data.model.Event
+import com.example.imperiumgym.databinding.FragmentFavoritenBinding
 import com.example.imperiumgym.databinding.FragmentHomeBinding
 import com.example.imperiumgym.viewmodel.SharedViewModel
 
-class HomeFragment : Fragment() {
+class FavoritenFragment : Fragment() {
 
+    private lateinit var binding: FragmentFavoritenBinding
+    private val viewModel: SharedViewModel by activityViewModels()
 
-    private lateinit var binding: FragmentHomeBinding
-    private val viewModel: SharedViewModel by activityViewModels ()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentFavoritenBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -48,7 +49,7 @@ class HomeFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                viewModel.filterbyEventName(s.toString())
+                viewModel.filterbyEventNameundFavorite(s.toString())
                 Log.d("textChanged",s.toString())
             }
 
@@ -56,24 +57,20 @@ class HomeFragment : Fragment() {
             }
         })
 
-
         val onDataClick: (Event) -> Unit = {
             viewModel.setDetails(it)
-            findNavController().navigate(R.id.action_homeFragment_to_detailEventFragment)
+            findNavController().navigate(R.id.action_favoritenFragment_to_detailEventFragment)
         }
-
-
 
         viewModel.filteredEvents.observe(viewLifecycleOwner) {
             binding.eventRV.adapter = EventAdapter(it, onDataClick)
         }
 
-
-        viewModel.filterbyEventName("")
+        viewModel.filterbyEventNameundFavorite("")
 
         val data = Datasource.data
         val adapter = EventAdapter(data, onDataClick)
         binding.eventRV.adapter = adapter
-        binding.emailAnzeigeTV.text = null
+
     }
 }

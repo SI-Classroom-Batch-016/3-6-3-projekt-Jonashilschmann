@@ -5,7 +5,7 @@
     android:id="@+id/editTextET"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.FavoritenFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/eventRV"
@@ -19,17 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2ET"
         tools:listitem="@layout/list_item" />
-
-    <TextView
-        android:id="@+id/emailAnzeigeTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/anzeige"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventRV" />
 
     <EditText
         android:id="@+id/editText2ET"
